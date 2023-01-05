@@ -1,0 +1,28 @@
+<body>
+    <main>
+      <form name="my-form" action="#" method="get">
+        <div class="form-box">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Search Username or Email"
+            [(ngModel)]="searchString"
+            (change)="searchUser(users)"
+          />
+        </div>
+        <div class="form-box">
+          <button id="btnSend">Send</button>
+        </div>
+      </form>
+    </main>
+    <div class="displayContainer">
+      <h1 *ngIf="isUserCreated" class="displayHeader">Found Users</h1>
+      <div class="displayContent" *ngFor="let user of searchResult">
+        User Name is {{ this.user.username }} and User Email is
+        {{ this.user.email }}
+      </div>
+    </div>
+  </body>
+  

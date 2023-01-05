@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #878787;
+}
+*,
+*::before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin-top: 5rem;
+}
+main {
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/*********************
+        Form
+  *********************/
+select,
+option,
+input,
+label,
+button {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  color: inherit;
+}
+.form-box {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.form-box label {
+  display: none;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+  flex-basis: 100%;
+  padding: 0.5em 0;
+  font-size: calc(0.75rem + 1vw);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  padding-left: 0.8em;
+}
+.form-box button {
+  font-size: calc(0.75rem + 1vw);
+  padding: 0.8em 2.5em;
+  color: seashell;
+  border-radius: 0.25em;
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #8dc26f,
+    #76b852,
+    #ed213a,
+    #93291e
+  );
+  background: linear-gradient(to right, #8dc26f, #76b852, #ed213a, #93291e);
+
+  background-size: 300%;
+  background-image: left;
+  transition: 1s background-position ease-in-out;
+}
+.form-box button:hover {
+  cursor: pointer;
+  background-position: right;
+}
+.displayContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+.displayHeader {
+  color: #1b5e20;
+  text-align: center;
+  border-bottom: 0.1em solid #1b5e20;
+}
+.displayContent {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.5em 0;
+  font-size: calc(0.75rem + 1vw);
+}
+
+/*******************************
+        Media Queries
+  *******************************/
+@media all and (min-width: 500px) {
+  .form-box {
+  }
+  .form-box label {
+    display: none;
+  }
+  .form-box input,
+  .form-box select,
+  .form-box textarea {
+  }
+  .form-box button {
+  }
+  .form-box button:hover {
+  }
+}
+
+@media all and (min-width: 600px) {
+  .form-box {
+    flex-direction: row;
+  }
+  .form-box label {
+    flex-basis: 9rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .form-box input,
+  .form-box select,
+  .form-box textarea {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .form-box button {
+    /* margin-left: 3rem; */
+  }
+}
