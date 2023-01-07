@@ -17,12 +17,12 @@
       </div>
     </form>
   </main>
-    <!-- <h1 *ngIf="isUserCreated" class="displayHeader">Found Users</h1>
+  <!-- <h1 *ngIf="isUserCreated" class="displayHeader">Found Users</h1>
       <div class="displayContent" *ngFor="let user of searchResult">
         User Name is {{ this.user.username }} and User Email is
         {{ this.user.email }}
       </div> -->
-      <div class="wrapper">
+  <div class="wrapper">
     <div class="table">
       <div class="row-header">
         <div class="cell">Id</div>
@@ -31,13 +31,13 @@
         <div class="cell">Email</div>
         <div class="cell">Age</div>
       </div>
-      </div>
-      <div class="row" *ngFor="let user of searchResult">
-        <div class="cell" data-title="Id">{{this.user.id}}</div>
-        <div class="cell" data-title="Username">{{this.user.username}}</div>
-        <div class="cell" data-title="Password">{{this.user.password}}</div>
-        <div class="cell" data-title="Email">{{this.user.email}}</div>
-        <div class="cell" data-title="Age">{{this.user.age}}</div>
-      </div>
     </div>
+    <div class="row" *ngFor="let user of searchResult">
+      <div class="cell" data-title="Id">{{ this.user.id }}</div>
+      <div class="cell" data-title="Username">{{ this.user.username }}</div>
+      <div class="cell" data-title="Password">{{ this.user.password }}</div>
+      <div class="cell" data-title="Email">{{ this.user.email }}</div>
+      <div class="cell" data-title="Age">{{ this.user.age }}</div>
+    </div>
+  </div>
 </body>
