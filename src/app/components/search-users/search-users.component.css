@@ -99,7 +99,7 @@ button {
         Table
   *********************/
 .wrapper {
-  margin: 7rem auto; 
+  margin: 7rem auto;
   max-width: 60%;
 }
 .table {
@@ -129,7 +129,6 @@ button {
 }
 .row .cell {
   padding: 5px;
-
 }
 /* .row-header .cell {
   background: #fff176;
@@ -169,7 +168,6 @@ div.cell {
   .form-box button:hover {
   }
 
-   
   /*.table{
     max-width: 95%;
     display:flex;
@@ -228,27 +226,26 @@ div.cell {
   /*********************
         Table
   *********************/
-  
-  .wrapper{
+
+  .wrapper {
     max-width: 100vw;
-    margin: 0 5px; 
+    margin: 0 5px;
   }
-  .table{
+  .table {
     max-width: 100%;
     font-size: 1rem;
   }
-  div.cell{
-    min-width: 80px;
-    white-space: nowrap;
-    text-overflow: hidden; 
+  div.cell {
+    /* min-width: 80px;
     text-overflow: ellipsis;
+    overflow: hidden; */
   }
   .row-header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     max-width: 100%;
-    padding: 5px; 
+    padding: 5px;
   }
   .row {
     /* background: #f6f6f6; */
@@ -268,13 +265,26 @@ div.cell {
   }
   .cell {
     padding: 5px;
-    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     border: 1px solid black;
     display: flex;
     justify-content: flex-start;
+    margin-right: 5px;
+
     /* flex: 1 1 auto; */
     /* text-overflow: ellipsis; */
   }
+}
+.cell > span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cell > span:hover {
+  overflow: visible;
+  white-space: normal;
+  height: auto;
+  z-index: 10;
 }
 
 @media all and (min-width: 600px) {
