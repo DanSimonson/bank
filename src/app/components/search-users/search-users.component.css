@@ -228,3 +228,9 @@ div.cell {
   .form-box button {
   }
 }
+@media all and (min-width: 1024px) {
+  .wrapper {
+    margin: 0 auto;
+    max-width: 65%;
+  }
+}
