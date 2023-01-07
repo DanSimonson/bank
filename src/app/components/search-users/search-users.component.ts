@@ -25,6 +25,7 @@ export class SearchUsersComponent {
   }
 
   searchUser(users: User[]) {
+  
     this.searchResult = this.users.filter(
       (result) =>
         result.email.includes(this.searchString) ||
@@ -32,7 +33,7 @@ export class SearchUsersComponent {
     );
     setTimeout(() => {
       this.delayClearInput();
-    }, 2000);
+    }, 1000);
     if(this.searchResult.length > 0){
       this.isUserCreated = true;
     }

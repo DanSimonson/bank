@@ -22,7 +22,7 @@
         User Name is {{ this.user.username }} and User Email is
         {{ this.user.email }}
       </div> -->
-  <div class="wrapper">
+  <div class="wrapper" *ngIf="isUserCreated">
     <div class="table">
       <div class="row-header">
         <div class="cell">Id</div>

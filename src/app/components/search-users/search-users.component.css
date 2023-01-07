@@ -57,17 +57,17 @@ button {
 .form-box button {
   font-size: calc(0.75rem + 1vw);
   padding: 0.8em 2.5em;
-  color: seashell;
+  color: #212121;
   border-radius: 0.25em;
   background: #76b852; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
-    #8dc26f,
-    #76b852,
-    #ed213a,
-    #93291e
+    #ffd600,
+    #ffea00,
+    #ffff00,
+    #ffff8d
   );
-  background: linear-gradient(to right, #8dc26f, #76b852, #ed213a, #93291e);
+  background: linear-gradient(to right, #ffea00, #ffea00, #ffff00, #ffeb3b);
 
   background-size: 300%;
   background-image: left;
@@ -77,24 +77,12 @@ button {
   cursor: pointer;
   background-position: right;
 }
-/* .displayContainer {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
-} */
 .displayHeader {
   color: #1b5e20;
   text-align: center;
   border-bottom: 0.1em solid #1b5e20;
 }
-/* .displayContent {
-  margin-top: 1rem;
-  text-align: center;
-  padding: 0.5em 0;
-  font-size: calc(0.75rem + 1vw);
-} */
+
 /*********************
         Table
   *********************/
@@ -125,14 +113,12 @@ button {
 .row-header .cell {
   margin-top: 10px;
   padding: 5px;
-  background: #fff176;
+  background: linear-gradient(to right, #ffea00, #ffea00, #ffff00, #ffeb3b);
 }
 .row .cell {
   padding: 5px;
 }
-/* .row-header .cell {
-  background: #fff176;
-} */
+
 div.cell {
   margin-top: 10px;
 }
@@ -167,60 +153,6 @@ div.cell {
   }
   .form-box button:hover {
   }
-
-  /*.table{
-    max-width: 95%;
-    display:flex;
-    flex-direction: row;
-    text-overflow: ellipsis;
-  } */
-  /* .row-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* width: 100%;
-    padding: 5px; 
-  } */
-  /*********************
-        Table
-  *********************/
-  /*.wrapper {
-    margin: 7rem auto;
-    max-width: 50%;
-  }
-  .row-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    padding: 5px;
-  }
-  
-  .table {
-    width: 100%;
-    font-size: 1rem;
-  }
-  .row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .row-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  .cell {
-    padding: 5px;
-    width: 100%;
-    border: 1px solid black; 
-    display: flex;
-    justify-content: center;
-    flex: 0 1 auto;
-  } */
 }
 @media all and (min-width: 500px) {
   /*********************
@@ -235,11 +167,7 @@ div.cell {
     max-width: 100%;
     font-size: 1rem;
   }
-  div.cell {
-    /* min-width: 80px;
-    text-overflow: ellipsis;
-    overflow: hidden; */
-  }
+  
   .row-header {
     display: flex;
     flex-direction: row;
@@ -248,7 +176,6 @@ div.cell {
     padding: 5px;
   }
   .row {
-    /* background: #f6f6f6; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -260,8 +187,6 @@ div.cell {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    /* color: #424242;
-    background: #fff176; */
   }
   .cell {
     padding: 5px;
@@ -271,9 +196,6 @@ div.cell {
     display: flex;
     justify-content: flex-start;
     margin-right: 5px;
-
-    /* flex: 1 1 auto; */
-    /* text-overflow: ellipsis; */
   }
 }
 .cell > span {
@@ -304,6 +226,5 @@ div.cell {
     flex-shrink: 1;
   }
   .form-box button {
-    /* margin-left: 3rem; */
   }
 }
