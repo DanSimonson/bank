@@ -15,14 +15,17 @@ export class SearchUsersComponent {
   searchResult: User[] = [];
   isUserCreated = false;
 
-  constructor(public searchUserService: SearchUserService) {}
+  constructor(public userService: SearchUserService) {}
 
   ngOnInit() {
-    this.getUsers() 
+    this.getAllUsers() 
   }
-  getUsers(){
-    this.users = this.searchUserService.getUsers();
-    console.log('users: ', this.users)
+
+  getAllUsers() {
+    this.userService.getUsers()
+    // this.userService.getUsers().subscribe((data) => {
+    //   this.users = data;
+    // });
   }
 
   searchUser(users: User[]) {

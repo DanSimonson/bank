@@ -2,14 +2,19 @@ const express = require("express");
 const app = express();
 
 //middleware
-// app.use((req, res, next) => {
-//     console.log('first middleware')
-//     next();
-// })
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"),
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+  res.setHeader(
+    "Access-Content-Allow-Methods",
+    "get, post, patch, delete, options"
+  );
+  next();
+});
 
-// app.use((req,res, next) => {
-//     res.send('hello from express');
-// })
 app.use("/api/users", (req, res, next) => {
   const users = [
     {

@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { identifierName } from '@angular/compiler';
 import { User } from 'src/app/models/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class SearchUserService {
-  users: User[] = []
+  constructor(public http: HttpClient){}
+  
+  private users: User[] = []
   // [
   //   {
   //     id: 1237,
@@ -37,7 +40,11 @@ export class SearchUserService {
   // ];
 
   getUsers() {
-    return [...this.users];
+    this.http.get<{message: string, users: User[]}>('http://localhost:3000/api/users').subscribe((userData) => {
+      console.log('userData: ', userData);
+      this.users = userData.users;
+    })
+    // return [...this.users];
   }
   addUser(userObj: User) {
     const user: User = userObj;
