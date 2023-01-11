@@ -1,4 +1,6 @@
-.button {
+
+
+ .button {
     background-color: #e8e8e8;
     color: #484848;
     padding: 7px;
@@ -16,5 +18,5 @@
     border: 2px solid #282828;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-}
+} 
 

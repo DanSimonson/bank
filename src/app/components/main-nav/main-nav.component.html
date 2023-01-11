@@ -1,6 +1,23 @@
-<nav>
-  <ul class="container">
-    <li>Search-Users</li>
-    <li>Currency-Converter</li>
+<!-- <ul class="container">
+  <li class="left">Bank</li>
+  <li class="fill-space"></li>
+  <li class="right">Search-Users</li>
+  <li class="right">Currency-Converter</li>
+</ul> -->
+<nav class="navbar">
+  <div>BANK</div>
+  <ul class="nav-list">
+    <li class="nav-item" routerLink="/search-users">
+      <a>Search-Users</a>
+    </li>
+    <li class="nav-item" routerLink="/currency-conversion">
+      <a>Currency-Conversion</a>
+    </li>
   </ul>
+  <div class="menu" (click)="toggleMe()">
+    <div class="menu-line"></div>
+    <div class="menu-line"></div>
+    <div class="menu-line"></div>
+  </div>
 </nav>
+<router-outlet></router-outlet>
