@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { SearchUserService } from './search-users.service';
+import { Subject } from 'rxjs'
 
 @Component({
   selector: 'app-search-users',
@@ -9,6 +10,7 @@ import { SearchUserService } from './search-users.service';
 })
 export class SearchUsersComponent {
   users: User[] = [];
+  foundUsers = new Subject<User>()
   searchString!: string;
   searchResult: User[] = [];
   isUserCreated = false;
@@ -16,8 +18,7 @@ export class SearchUsersComponent {
   constructor(public searchUserService: SearchUserService) {}
 
   ngOnInit() {
-    this.getUsers()
-    
+    this.getUsers() 
   }
   getUsers(){
     this.users = this.searchUserService.getUsers();
