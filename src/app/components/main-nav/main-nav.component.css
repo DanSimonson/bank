@@ -77,7 +77,7 @@ nav a {
   cursor: pointer;
 }
 .menu {
-  /* display: none; */
+  display: none; 
 }
 .menu-line {
   width: 20px;
@@ -94,6 +94,7 @@ nav a {
     position: absolute;
     right: 10px;
     top: 10px;
+    display: block;
   }
   .nav-list {
     list-style-type: none;
